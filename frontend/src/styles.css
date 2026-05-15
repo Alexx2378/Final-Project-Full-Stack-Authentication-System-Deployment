@@ -1,17 +1,243 @@
-/* You can add global styles to this file, and also import other style files */
-.app-container {
-    min-height: 320px;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
+* {
+  font-family: 'Inter', sans-serif;
+  box-sizing: border-box;
 }
 
+body {
+  background: #6a58bb;
+  background: linear-gradient(135deg, #c0c9f1 0%, #e9dcf5 100%);
+  min-height: 100vh;
+  margin: 0;
+}
+
+/* ── Navbar ── */
+nav.navbar {
+  background: rgba(19, 3, 61, 0.25) !important;
+  border-bottom: 1px solid rgba(255,255,255,0.15);
+  padding: 0.75rem 1.5rem;
+}
+
+nav.navbar a {
+  color: rgba(255,255,255,0.9) !important;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: color 0.2s;
+}
+
+nav.navbar a:hover {
+  color: #ffffff !important;
+}
+
+/* ── Card ── */
+.card {
+  border: none !important;
+  border-radius: 18px !important;
+  box-shadow: 0 25px 50px rgba(0,0,0,0.18) !important;
+  overflow: hidden;
+}
+
+.card-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  color: white !important;
+  padding: 1.4rem 1.8rem !important;
+  font-size: 1.2rem !important;
+  font-weight: 600 !important;
+  border: none !important;
+  border-radius: 0 !important;
+  letter-spacing: 0.01em;
+}
+
+.card-body {
+  padding: 2rem 2rem !important;
+  background: #ffffff;
+}
+
+/* ── Form elements ── */
+.form-label {
+  font-weight: 500;
+  color: #4a5568;
+  font-size: 0.88rem;
+  margin-bottom: 0.35rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.form-control,
+.form-select {
+  border: 1.5px solid #e2e8f0 !important;
+  border-radius: 10px !important;
+  padding: 0.6rem 0.95rem !important;
+  font-size: 0.95rem !important;
+  color: #2d3748 !important;
+  transition: border-color 0.2s, box-shadow 0.2s !important;
+  background: #f8fafc !important;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: #667eea !important;
+  box-shadow: 0 0 0 3px rgba(102,126,234,0.18) !important;
+  background: #ffffff !important;
+  outline: none !important;
+}
+
+.form-control::placeholder {
+  color: #a0aec0 !important;
+}
+
+.form-control.is-invalid,
+.form-select.is-invalid {
+  border-color: #fc8181 !important;
+  background: #fff5f5 !important;
+}
+
+.invalid-feedback {
+  font-size: 0.8rem;
+  color: #e53e3e;
+}
+
+/* ── Buttons ── */
+.btn-primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  border: none !important;
+  border-radius: 10px !important;
+  padding: 0.7rem 1.8rem !important;
+  font-weight: 600 !important;
+  font-size: 0.95rem !important;
+  letter-spacing: 0.02em !important;
+  transition: all 0.2s !important;
+  color: white !important;
+}
+
+.btn-primary:hover:not(:disabled) {
+  transform: translateY(-1px) !important;
+  box-shadow: 0 8px 20px rgba(102,126,234,0.45) !important;
+}
+
+.btn-primary:disabled {
+  opacity: 0.7 !important;
+}
+
+.btn-link {
+  color: #667eea !important;
+  font-weight: 500 !important;
+  text-decoration: none !important;
+  font-size: 0.9rem !important;
+}
+
+.btn-link:hover {
+  color: #764ba2 !important;
+  text-decoration: underline !important;
+}
+
+.btn-danger {
+  border-radius: 8px !important;
+  font-weight: 500 !important;
+}
+
+.btn-success {
+  border-radius: 8px !important;
+  font-weight: 500 !important;
+}
+
+/* ── Checkbox ── */
+.form-check-input:checked {
+  background-color: #667eea !important;
+  border-color: #667eea !important;
+}
+
+.form-check-label {
+  font-size: 0.9rem;
+  color: #4a5568;
+}
+
+/* ── Alerts ── */
+.alert {
+  border-radius: 12px !important;
+  border: none !important;
+  font-size: 0.92rem !important;
+}
+
+.alert-info {
+  background: #ebf8ff !important;
+  color: #2b6cb0 !important;
+}
+
+.alert-danger {
+  background: #fff5f5 !important;
+  color: #c53030 !important;
+}
+
+.alert-success {
+  background: #f0fff4 !important;
+  color: #276749 !important;
+}
+
+/* ── Admin section ── */
 .admin-nav {
-    padding-top: 0;
-    padding-bottom: 0;
-    background-color: #e8e9ea;
-    border-bottom: 1px solid #ccc;
+  padding-top: 0;
+  padding-bottom: 0;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-bottom: none;
 }
 
+.admin-nav .nav-link {
+  color: rgba(255,255,255,0.85) !important;
+  font-weight: 500;
+  padding: 0.75rem 1.2rem !important;
+}
+
+.admin-nav .nav-link:hover,
+.admin-nav .nav-link.active {
+  color: #ffffff !important;
+  background: rgba(255,255,255,0.15) !important;
+}
+
+/* ── Table ── */
+.table {
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.table thead th {
+  background: #f7fafc;
+  color: #4a5568;
+  font-size: 0.82rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  border-bottom: 2px solid #e2e8f0;
+  padding: 1rem;
+}
+
+.table tbody td {
+  padding: 0.85rem 1rem;
+  color: #2d3748;
+  vertical-align: middle;
+  border-color: #f0f0f0;
+}
+
+.table tbody tr:hover {
+  background: #f8fafc;
+}
+
+/* ── App container ── */
+.app-container {
+  min-height: 320px;
+}
+
+/* ── Spinner ── */
+.spinner-border-sm {
+  width: 1rem;
+  height: 1rem;
+}
+
+/* ── btn-delete-account ── */
 .btn-delete-account {
-    width: 40px;
-    text-align: center;
-    box-sizing: content-box;
+  width: 40px;
+  text-align: center;
+  box-sizing: content-box;
 }

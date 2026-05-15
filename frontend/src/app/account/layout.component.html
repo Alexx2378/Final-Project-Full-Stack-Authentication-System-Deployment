@@ -1,9 +1,16 @@
-<div class="container">
-  <div class="row">
-    <div class="col-lg-8 offset-lg-2 mt-5">
-        <div class="card m-3">
-          <router-outlet></router-outlet>
-        </div>      
+<div class="container py-5">
+  <div class="row justify-content-center">
+    <div class="col-lg-5 col-md-7 col-sm-10">
+      <div class="text-center mb-4">
+        <div style="width:60px;height:60px;background:white;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 12px;">
+          <i class="bi bi-shield-lock-fill" style="font-size:1.8rem;color:#667eea;"></i>
+        </div>
+        <h4 style="color:white;font-weight:700;margin:0;">AuthSystem</h4>
+        <p style="color:rgba(255,255,255,0.7);font-size:0.9rem;">Secure Authentication Platform</p>
       </div>
+      <div class="card">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
   </div>
 </div>
