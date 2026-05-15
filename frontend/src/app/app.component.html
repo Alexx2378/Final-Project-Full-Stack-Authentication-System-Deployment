@@ -1,0 +1,14 @@
+<nav class="navbar navbar-expand navbar-dark bg-dark">
+  <div class="navbar-nav">
+    <a routerLink="/" class="nav-item nav-link">Home</a>
+    <a *ngIf="account" routerLink="/profile" class="nav-item nav-link">Profile</a>
+    <a *ngIf="account?.role === Role.Admin" routerLink="/admin" class="nav-item nav-link">Admin</a>
+    <a *ngIf="!account" routerLink="/account/login" class="nav-item nav-link">Login</a>
+    <a *ngIf="!account" routerLink="/account/register" class="nav-item nav-link">Register</a>
+    <a *ngIf="account" class="nav-item nav-link" (click)="logout()">Logout</a>
+  </div>
+</nav>
+
+<alert></alert>
+
+<router-outlet></router-outlet>
